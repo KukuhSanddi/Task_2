@@ -6,8 +6,8 @@
 package task_2;
 
 /**
- *  NIM = .............................................
- *  Nama = .............................................
+ *  NIM = 1301154264
+ *  Nama = Kukuh Sanddi Razaq
  */
 public class Main {
 
@@ -17,7 +17,7 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         Mahasiswa m1 = new Mahasiswa();
-        m1.setNIM("001");
+        m1.setNim("001");
         m1.setNama("Budi");
         m1.addNilai('C');
         m1.addNilai('D');
