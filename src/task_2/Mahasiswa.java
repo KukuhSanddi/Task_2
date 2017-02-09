@@ -43,7 +43,7 @@ public class Mahasiswa {
         String x = null;
         int y = 0;
         x = "NIM = "+nim+"\nNama = "+nama+"\nStatus = "+status+"\nNilai = ";
-            while (y!=i){
+            while (y<i){
                 x = x + nilai[y] + ", ";
                 y++;
             }
