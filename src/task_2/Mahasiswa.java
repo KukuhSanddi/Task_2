@@ -6,7 +6,9 @@
 package task_2;
 
 /**
- *
+ * Nama : Kukuh Sanddi Razaq
+ * Nim  : 1301154264
+ * Kelas : IF 39-12
  * @author Kukuh Sanddi
  */
 public class Mahasiswa {
@@ -32,7 +34,7 @@ public class Mahasiswa {
     
     public void addNilai (char nilai){
         if(i<10){
-            this.nilai[1] = nilai;
+            this.nilai[i] = nilai;
         }
         i++;
     }
@@ -41,30 +43,14 @@ public class Mahasiswa {
         String x = null;
         int y = 0;
         x = "NIM = "+nim+"\nNama = "+nama+"\nStatus = "+status+"\nNilai = ";
-            while (y<i){
-                x = x + nilai[y] + " - ";
-                i++;
+            while (y!=i){
+                x = x + nilai[y] + ", ";
+                y++;
             }
         return x;
     }
     
-    public char cekNilai(Mahasiswa m) {
-        int a = 0;
-        int b = 0;
-        char x = 'X';
-         while (a != i){
-             while (b != i){
-                 if(m.nilai[a]== nilai[b]){
-                     if (m.nilai[a] != x){
-                         x = m.nilai[a];
-                     }
-                 }
-                 b++;
-             }
-             a++;
-         }
-         return x;
-    }
+    
     
     public int getI() {
         return i;
@@ -105,5 +91,22 @@ public class Mahasiswa {
     public void setNilai(char[] nilai) {
         this.nilai = nilai;
     }
-    
+ public char cekNilai(Mahasiswa m) {
+        int a = 0;
+        int b = 0;
+        char x = 'X';
+         while (a < i){
+             while (b != i){
+                 if(m.nilai[a]== nilai[b]){
+                     if (m.nilai[a] != x){
+                         x = m.nilai[a];
+                     }
+                 }
+                 b++;
+             }
+             b=0;
+             a++;
+         }
+         return x;
+    }   
 }
